@@ -1,0 +1,17 @@
+# API
+fastapi==0.165.0
+uvicorn[standard]==0.54.0
+python-multipart==0.0.34
+
+# Computer vision
+mediapipe==1.2.3
+opencv-contrib-python==5.0.0.93
+numpy==2.5.5
+
+# Machine learning and inference
+torch==2.11.0
+transformers==5.24.0
+sentencepiece==0.2.3
+
+# Model downloads
+gdown==6.5.2

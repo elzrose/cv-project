@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISL Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <div class="logo">ISL</div>
+            <div>
+                <h1>SignSpeak</h1>
+                <p>Indian Sign Language Translator</p>
+            </div>
+        </header>
+
+        <section class="camera-container">
+            <video id="cameraPreview" autoplay playsinline muted></video>
+
+            <div class="camera-placeholder" id="cameraPlaceholder">
+                <span>📷</span>
+                <p>Camera preview will appear here</p>
+            </div>
+
+            <span class="recording-indicator" id="recordingIndicator">
+                ● REC
+            </span>
+        </section>
+
+        <div class="camera-status" id="cameraStatus">
+            Camera not connected
+        </div>
+
+        <section class="controls">
+            <button id="startBtn" class="btn btn-primary">
+                Start Recording
+            </button>
+
+            <button id="stopBtn" class="btn btn-secondary" disabled>
+                Stop
+            </button>
+        </section>
+
+        <button id="translateBtn" class="btn btn-translate" disabled>
+            Translate to English →
+        </button>
+
+        <div class="status-message" id="statusMessage">
+            Connect your camera to get started.
+        </div>
+
+        <section class="result-section">
+            <div class="result-heading">
+                <h2>Translation</h2>
+                <span>ENGLISH</span>
+            </div>
+
+            <p id="translationResult">
+                Your translation will appear here...
+            </p>
+        </section>
+
+        <footer>
+            Powered by MediaPipe & ISLiM
+        </footer>
+
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

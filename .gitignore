@@ -1,12 +1,26 @@
+# Python
 .venv/
 __pycache__/
 *.pyc
 
+# Model weights
 models/
 *.pt
 *.ptl
 
-islm_sequence.npy
+# MediaPipe task models (download separately)
+face_landmarker.task
+hand_landmarker.task
+pose_landmarker_full.task
+
+# Generated data and recordings
+uploads/
 *.npy
 
+# Environment variables
 .env
+
+# IDE and OS files
+.vscode/
+.DS_Store
+Thumbs.db

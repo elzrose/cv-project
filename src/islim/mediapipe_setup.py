@@ -90,7 +90,7 @@ def extract_94_landmarks(hand_result, pose_result, face_result):
     """Extract the notebook's ordered (94, 4) x/y/z/visibility array."""
     keypoints = np.zeros((94, 4), dtype=np.float32)
 
-    # 1. Pose landmarks (0–5)
+    # 1. Pose landmarks (0â€“5)
     if pose_result.pose_landmarks:
         pose_landmarks = pose_result.pose_landmarks[0]
         for i, idx in enumerate(POSE_INDICES):
@@ -98,7 +98,7 @@ def extract_94_landmarks(hand_result, pose_result, face_result):
             visibility = lm.visibility if lm.visibility is not None else 0.0
             keypoints[i] = [lm.x, lm.y, lm.z, visibility]
 
-    # 2. Hand landmarks (6–47)
+    # 2. Hand landmarks (6â€“47)
     if hand_result.hand_landmarks:
         for hand_index, hand_landmarks in enumerate(hand_result.hand_landmarks):
             if hand_index >= len(hand_result.handedness):
@@ -123,7 +123,7 @@ def extract_94_landmarks(hand_result, pose_result, face_result):
             for i, lm in enumerate(hand_landmarks):
                 keypoints[start_idx + i] = [lm.x, lm.y, lm.z, 1.0]
 
-    # 3. Face landmarks (48–93)
+    # 3. Face landmarks (48â€“93)
     if face_result.face_landmarks:
         face_landmarks = face_result.face_landmarks[0]
         for i, idx in enumerate(FACE_INDICES):
